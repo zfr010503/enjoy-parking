@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/home_page/home_page",
+        "pages/serve_page/serve_page",
+        "pages/index/index",
+        "pages/logs/logs",
+        "custom-tab-bar/index"
+    ],
+    "window": {
+        "backgroundColor": "#f1f2f3",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1d78fa",
+        "navigationBarTitleText": "享停车",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "custom": true,
+      "list": [
+      {
+        "pagePath": "pages/home_page/home_page",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_selected.png"
+      },
+      {
+        "pagePath": "pages/serve_page/serve_page",
+        "text": "服务",
+        "iconPath": "image/service.png",
+        "selectedIconPath": "image/service_selected.png"
+      }
+    ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

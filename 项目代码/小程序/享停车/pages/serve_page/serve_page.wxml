@@ -1,0 +1,20 @@
+<!--pages/serve_page/serve_page.wxml-->
+<!-- <text>pages/serve_page/serve_page.wxml</text> -->
+<scroll-view scroll-y>
+<swiper class="swiper_container" autoplay circular>
+    <swiper-item wx:for="{{img_list}}" wx:key="index">
+        <!-- <view class="item">A</view> -->
+        <image src="{{item}}" mode="aspectFit"></image>
+    </swiper-item>
+</swiper>
+
+<text user-select> {{input_test}}</text>
+<text user-select> {{count}}</text>
+<button class="login_btn" bindtap="btnTapHandler">登录</button>
+<button class="plus_btn" bindtap="plus" data-n="{{2}}">+2</button>
+<input class="input_test" bindinput="inputHandler"></input>
+<text wx:if="{{type === 1}}">男</text>
+<text wx:elif="{{type === 2}}">女</text>
+<text wx:else>保密</text>
+</scroll-view>
+

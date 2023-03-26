@@ -1,0 +1,42 @@
+/* pages/serve_page/serve_page.wxss */
+.swiper_container{
+    height: 425rpx;
+    width: 98%;
+    padding-top: 2%;
+}
+
+/* .item{
+    height: 100%;
+    line-height: 425rpx;
+    text-align: center;
+} */
+
+/* swiper-item:nth-child(1) .item{
+    background-color: lightblue;
+}
+swiper-item:nth-child(2) .item{
+    background-color: lightgreen;
+}
+swiper-item:nth-child(3) .item{
+    background-color: lightpink;
+} */
+
+.login_btn{
+    height: 80rpx;
+    background-color: lightskyblue;
+    /* color: white; */
+}
+
+image{
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+}
+
+input{
+    border: 2px solid #eee;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border-bottom: solid gray;
+}

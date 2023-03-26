@@ -1,0 +1,31 @@
+/* pages/home_page/home_page.wxss */
+/* .bottom_bar{
+    position: fixed;
+    bottom: 0px;
+}
+.row{
+    height: 75rpx;
+    width: 100%;
+}
+.column{
+    width: 25%;
+}
+image{
+    height: 70rpx;
+    width: 70rpx;
+}
+
+.home{
+    margin-left:25%;
+}
+.navigate{
+    position:absolute;
+    left: 250rpx;
+}
+.service{
+    position:absolute;
+    left: 500rpx;
+}
+.account{
+    margin-left:75%;
+} */

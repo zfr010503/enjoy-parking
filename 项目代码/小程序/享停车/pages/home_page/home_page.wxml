@@ -1,0 +1,34 @@
+<!--pages/home_page/home_page.wxml-->
+<text>pages/home_page/home_page.wxml</text>
+<!-- <view class="bottom_bar">
+    <view class="row">
+        <view class="home">
+            <view class="center">
+                <view class="column">
+                    <image src="/image/home_selected.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="navigate">
+            <view class="center">
+                <view class="column">
+                    <image src="/image/home_selected.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="service">
+            <view class="center">
+                <view class="column">
+                    <image src="/image/home_selected.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="account">
+            <view class="center">
+                <view class="column">
+                    <image src="/image/home_selected.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view> -->
