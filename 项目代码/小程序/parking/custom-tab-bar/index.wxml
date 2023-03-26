@@ -1,0 +1,64 @@
+<!--custom-tab-bar/index.wxml-->
+<van-tabbar wx:if="{{show_TabBar}}" active="{{ active }}" bind:change="onChange" active-color="#299cc9"> 
+  <van-tabbar-item >
+    <image 
+        slot="icon-active" 
+        class="home_icon" 
+        src="/image//home_selected_new.png"
+        style="width: 90rpx;height: 90rpx;"
+        >
+    </image>
+    <image 
+        slot="icon"  
+        src="/image/home.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    <block wx:if="{{active!==0}}">主页</block>
+  </van-tabbar-item>
+  <van-tabbar-item >
+    <image 
+        slot="icon-active" 
+        src="/image/navigate_selected.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    <image 
+        slot="icon"  
+        src="/image/navigate.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    停车
+  </van-tabbar-item>
+  <van-tabbar-item >
+    <image 
+        slot="icon-active" 
+        src="/image/service_selected.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    <image 
+        slot="icon"  
+        src="/image/service.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    订单
+  </van-tabbar-item>
+  <van-tabbar-item >
+    <image 
+        slot="icon-active" 
+        src="/image/account_selected.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    <image 
+        slot="icon"  
+        src="/image/account.png"
+        style="width: 45rpx;height: 45rpx;"
+        >
+    </image>
+    我的
+  </van-tabbar-item>
+</van-tabbar>
