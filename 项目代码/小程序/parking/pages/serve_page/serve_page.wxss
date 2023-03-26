@@ -1,4 +1,0 @@
-/* pages/serve_page/serve_page.wxss */
-page{
-    height: 100%;
-}

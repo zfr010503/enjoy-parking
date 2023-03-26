@@ -1,4 +1,0 @@
-/* custom-tab-bar/index.wxss */
-.home_icon{
-    margin-top: 7rpx;
-}
