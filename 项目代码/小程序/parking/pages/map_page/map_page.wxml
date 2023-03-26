@@ -1,0 +1,42 @@
+<!--pages/map_page/map_page.wxml-->
+<map 
+        class="my_map"
+        id="map"
+        subkey="{{subkey}}"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        scale="{{scale}}"
+        enable-rotate="{{true}}"
+        enable-traffic="{{true}}"
+        enable-building="{{true}}"
+        show-location="{{true}}"
+></map>
+<view id="outsearch" class="search_view" >
+    <view class="search_field" bindtap="tap_search">
+        <input placeholder="输入目的地"  class='input' 	disabled="true" bindtap="showPopup" />
+        <image class="search_icon"  src="/image/search.png"></image>
+    </view>
+</view>
+<van-cell title="展示弹出层" is-link bind:click="showPopup" />
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 65%" round bind:close="onClose">
+    <view id="insearch" class="search_view" >
+    <view class="search_field" bindtap="tap_search">
+        <input id="ininput" placeholder="输入目的地"  class='input' bindinput="getsuggest" value="{{backfill}}" confirm-type="search"/>
+        <image class="search_icon"  src="/image/search.png"></image>
+        <scroll-view style="height: {{height*0.5}}px;"   scroll-y>
+                <view wx:for="{{suggestion}}" wx:key="index" wx:for-item="suggestion">
+                    <image src="/pages/map_page/images/locate.png" class="icon"></image>
+                    <!--绑定回填事件-->
+                    <view class="suggest"  bindtap="backfill" id="{{index}}">
+                        <!--根据需求渲染相应数据-->
+                        <!--渲染地址title-->
+                        <view class="suggest_title" >{{suggestion.title}}</view>
+                        <!--渲染详细地址-->
+                        <view class="suggest_detail" >{{suggestion.addr}}</view>
+                     </view>
+                </view>
+        </scroll-view>
+    </view>
+    </view>
+</van-popup>
+<image class="findme" src="/image/findme.png" bindtap="get_myLocation"></image>

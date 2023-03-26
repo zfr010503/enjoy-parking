@@ -1,0 +1,47 @@
+<!--pages/order_page/order_page.wxml-->
+
+<view class="container">
+    
+    <view class="card_view">
+        <block wx:for="{{order}}" wx:for-item="order">
+                    <view class="card" wx:if="{{active==0||(active==1&&order.state=='待停车')||(active==2&&order.state=='待支付')||(active==3&&order.state=='已完成')}}">
+                        <view class="state_view">
+                            <image wx:if="{{order.state=='待停车'}}" class="icon" src="/pages/order_page/images/wait_for_park.png"></image>
+                            <image wx:if="{{order.state=='待支付'}}" class="icon" src="/pages/order_page/images/wait_for_pay.png"></image>
+                            <image wx:if="{{order.state=='已完成'}}" class="icon" src="/pages/order_page/images/wait_for_comment.png"></image>
+                            <view class="state_text">{{order.state}}</view>
+                            <view class="order_time">订单时间：{{order.order_time}}</view>
+                        </view>
+                        <view class="detail_view">
+                            <view wx:if="{{order.state=='待支付'}}" id="rmb" class="free_text">￥</view>
+                            <view wx:if="{{order.state=='待支付'}}" id="rmb_number" class="free_text">{{order.free_text}}</view>
+                            <view wx:if="{{order.state=='待停车'}}" class="free_text">{{order.free_text}}</view>
+                            <view wx:if="{{order.state=='已完成'}}" style="font-size: 35rpx;" class="free_text">{{order.free_text}}</view>
+                            <view wx:if="{{order.state=='待停车'}}" class="free_text_lable">预约入场倒计时</view>
+                            <view wx:if="{{order.state=='待支付'}}" class="free_text_lable">停车应付金额</view>
+                            <view wx:if="{{order.state=='已完成'}}" class="free_text_lable">订单已完成 感谢您的支持</view>
+                            <view class="free_text_lable_1">停车场：</view>
+                            <view class="free_text_lable_2">停车位：</view>
+                            <view class="free_text_detail_1">{{order.parkinglot}}</view>
+                            <view class="free_text_detail_2">{{order.parkingid}}</view>
+                            <view class="seemore">
+                                <view>查看订单</view>
+                                <image style="width: 20rpx; height: 20rpx;" class="seemore_icon" src="/pages/order_page/images/right_grey.png"></image>
+                            </view>
+                            <view class="btn">
+                                <button wx:if="{{order.state=='待停车'}}" id="btn_2">取消预约</button>
+                                <button wx:if="{{order.state=='待支付'}}" id="btn_2">立即支付</button> 
+                                <button wx:if="{{order.state=='已完成'}}" id="btn_2">立即评价</button> 
+                                <button wx:if="{{order.state=='待停车'}}" id="btn_1">导航</button>
+                            </view>
+                        </view>
+                    </view>
+        </block> 
+    </view>
+    <van-tabs active="{{ active }}" bind:change="tab_Change" swipeable="{{true}}" color="#5573f2" line-width="80rpx" title-active-color="#5573f2" border="{{true}}" sticky>
+        <van-tab title="全部"></van-tab>
+        <van-tab title="待停车"></van-tab>
+        <van-tab title="待支付"></van-tab>
+        <van-tab title="已完成"></van-tab>
+    </van-tabs>
+</view>

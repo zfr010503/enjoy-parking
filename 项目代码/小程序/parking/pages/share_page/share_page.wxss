@@ -1,0 +1,209 @@
+/* pages/share_page/share_page.wxss */
+page{
+    background: #f9f9f9;
+    height: 100%;
+}
+
+
+.card{
+    position: relative;
+    margin-top: 40rpx;
+    margin-left: 34rpx;
+    margin-right: 34rpx;
+    height: auto;
+    background: white;
+    border-radius: 40rpx;
+    box-shadow: 1rpx 1rpx 15rpx 15rpx rgba(165, 165, 165, 0.10);
+}
+
+.add{
+    position: relative;
+    margin-top: 40rpx;
+    margin-left: 34rpx;
+    margin-right: 34rpx;
+    height: 107rpx;
+    background: white;
+    border-radius: 26rpx;
+    box-shadow: 1rpx 1rpx 15rpx 15rpx rgba(165, 165, 165, 0.10);
+    line-height: 107rpx;
+    text-align: center;
+    color: gray;
+}
+
+.inside_view{
+    position: relative;
+}
+.view1{
+    position: absolute;
+    left: 40rpx;
+    padding-top: 32rpx;
+    padding-bottom: 26rpx;
+    font-size: 35rpx;
+}
+.view2{
+    position: absolute;
+    margin-top: 105rpx;
+    left: 0px;
+    right: 0px;
+    height: 60rpx;
+    border-bottom: 2rpx solid rgba(128, 128, 128, 0.1);
+    font-size: 26rpx;
+}
+.parkingid{
+    position: absolute;
+    left: 40rpx;
+    width: 200rpx;
+    color: gray;
+}
+.parkingid_detail{
+    position: absolute;
+    left: 140rpx;
+    width: 200rpx;
+}
+.price{
+    position: absolute;
+    left: 270rpx;
+    width: 200rpx;
+    color: gray;
+}
+.price_detail{
+    position: absolute;
+    left: 340rpx;
+    width: 200rpx;
+}
+.view3{
+    position: absolute;
+    margin-top: 200rpx;
+    left: 0px;
+    right: 0px;
+    height: 60rpx;
+    border-bottom: 2rpx solid rgba(128, 128, 128, 0.1);
+    font-size: 26rpx;
+}
+.available_time{
+    position: absolute;
+    left: 40rpx;
+    width: 200rpx;
+    color: gray;
+}
+.available_time_detail{
+    position: absolute;
+    left: 190rpx;
+    width: auto;
+}
+.view4{
+    position: absolute;
+    margin-top: 296rpx;
+    left: 0px;
+    right: 0px;
+    height: 60rpx;
+    border-bottom: 2rpx solid rgba(128, 128, 128, 0.1);
+    font-size: 26rpx;
+}
+.detail{
+    position: absolute;
+    left: 40rpx;
+    width: 200rpx;
+    color: gray;
+}
+.detail_detail{
+    position: absolute;
+    left: 190rpx;
+    width: 200rpx;
+}
+.view5{
+    position: absolute;
+    margin-top: 394rpx;
+    left: 0px;
+    right: 0px;
+    height: 60rpx;
+    border-bottom: 2rpx solid rgba(128, 128, 128, 0.1);
+    font-size: 26rpx;
+}
+.phone{
+    position: absolute;
+    left: 40rpx;
+    width: 200rpx;
+    color: gray;
+}
+.phone_detail{
+    position: absolute;
+    left: 190rpx;
+    width: 200rpx;
+}
+.btn_save{
+    position: absolute;
+    top: 465rpx;
+    left: 460rpx;
+    overflow: hidden;
+    height: 44rpx;
+    width: 175rpx;
+    border-radius: 25rpx;
+    line-height: 44rpx;
+    font-size: 26rpx;
+    background: #5270f2;
+    color: white;
+    box-shadow: 1rpx 1rpx 10rpx 10rpx rgba(101, 150, 255, 0.1);
+}
+.btn_edit{
+    position: absolute;
+    top: 465rpx;
+    left: 460rpx;
+    overflow: hidden;
+    height: 44rpx;
+    width: 175rpx;
+    border-radius: 25rpx;
+    line-height: 44rpx;
+    font-size: 26rpx;
+    border: 3rpx inset black;
+    background: white;
+}
+.btn_delete{
+    position: absolute;
+    top: 465rpx;
+    left: 250rpx;
+    overflow: hidden;
+    height: 44rpx;
+    width: 175rpx;
+    border-radius: 25rpx;
+    line-height: 44rpx;
+    font-size: 26rpx;
+    border: 3rpx inset black;
+    background: white;
+}
+
+input{
+    
+}
+
+.pick_day_view{
+    position: absolute;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+}
+
+van-checkbox{
+    margin-left: 5rpx;
+}
+
+.available_day_detail{
+    position: absolute;
+    left: 450rpx;
+    width: 150rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pick_day_icon{
+    position: absolute;
+    left: 600rpx;
+}
+.add_icon{
+    position: absolute;
+    top: 50%;
+    left: 195rpx;
+    transform: translate(0%, -50%); 
+}

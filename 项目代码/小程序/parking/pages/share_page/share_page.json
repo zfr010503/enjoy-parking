@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "共享车位",
+    "usingComponents": {
+        "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+    }
+}

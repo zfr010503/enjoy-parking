@@ -1,0 +1,110 @@
+<!--pages/share_page/share_page.wxml-->
+<view class="card" wx:for="{{share_data}}" wx:key="index" wx:for-item="share_data">
+    <view class="inside_view" wx:if="{{!share_data.on_edit}}" style="height: 520rpx;" >
+        <view class="view1">
+            {{share_data.parkinglot}}
+        </view>
+        <view class="view2">
+            <view class="parkingid">停车位：</view>
+            <view class="price">单价：</view>
+            <view class="parkingid_detail">{{share_data.parkingid}}</view>
+            <view class="price_detail">{{share_data.price}}/h</view>
+        </view>
+        <view class="view3">
+            <view class="available_time">可用时间段：</view>
+            <view class="available_day_detail">{{share_data.day}}</view>
+            <view class="available_time_detail">
+            {{share_data.start_time }}
+            {{" ~ "}}
+            {{share_data.end_time }}
+            </view>
+        </view>
+        <view class="view4">
+            <view class="detail">详细地址：</view>
+            <view class="detail_detail">{{share_data.detail}}</view>
+        </view>
+        <view class="view5">
+            <view class="phone">联系电话：</view>
+            <view class="phone_detail">{{share_data.phone}}</view>
+        </view>
+        <button class="btn_edit" bindtap="edit_current" id="{{index}}">编辑</button>
+        <button class="btn_delete" id="{{index}}" bindtap="delete_current">删除</button>
+    </view>
+    <view class="inside_view" wx:if="{{share_data.on_edit}}" style="height: 520rpx;">
+        <view class="view1">
+            <input value="{{share_data.parkinglot}}" placeholder="请输入停车场名称"id="{{index}}"	bindinput="input_parkinglot"/>
+        </view>
+        <view class="view2">
+            <view class="parkingid">停车位：</view>
+            <view class="price">单价：</view>
+            <input class="parkingid_detail" value="{{share_data.parkingid}}" placeholder="车位编号" style="width: 100rpx;"id="{{index}}" bindinput="input_parkingid"/>
+            <view class="price_detail" ><input style="width: auto;" value="{{share_data.price}}" placeholder="每小时停车价格" type="digit"id="{{index}}" bindinput="input_price"/></view>
+        </view>
+        <view class="view3">
+            <view class="available_time">可用时间段：</view>
+            <van-popup show="{{ pick_day }}" bind:close="onClose" custom-style="width: 70%; height: 40%;" round="{{true}}" catchtouchmove="true">
+                <view class="pick_day_view">
+                选择车位闲置时间
+                    <van-checkbox-group value="{{ share_data.day }}" bind:change="pickday_onChange" id="{{index}}">
+                        <van-checkbox name="周一">周一</van-checkbox>
+                        <van-checkbox name="周二">周二</van-checkbox>
+                        <van-checkbox name="周三">周三</van-checkbox>
+                        <van-checkbox name="周四">周四</van-checkbox>
+                        <van-checkbox name="周五">周五</van-checkbox>
+                        <van-checkbox name="周六">周六</van-checkbox>
+                        <van-checkbox name="周日">周日</van-checkbox>
+                    </van-checkbox-group>
+                </view>
+            </van-popup>
+            <van-popup show="{{ pick_start_time }}" bind:close="onClose" custom-style="width: 70%;" round="{{true}}">
+                <van-datetime-picker
+                    type="time"
+                    title="选择开始时间"
+                    value="{{ share_data.start_time }}"
+                    min-hour="{{ 00 }}"
+                    max-hour="{{ 23 }}"
+                    bind:confirm="start_time_confirm"
+                    bind:cancel="onClose"
+                    id="{{index}}"
+                />
+            </van-popup>
+            <van-popup show="{{ pick_end_time }}" bind:close="onClose" custom-style="width: 70%;" round="{{true}}">
+                <van-datetime-picker
+                    type="time"
+                    title="选择结束时间"
+                    value="{{ share_data.end_time }}"
+                    min-hour="{{ 00 }}"
+                    max-hour="{{ 23 }}"
+                    bind:confirm="end_time_confirm"
+                    bind:cancel="onClose"
+                    id="{{index}}"
+                />
+            </van-popup>
+            <view class="available_day_detail">{{share_data.day}}</view>
+            <image class="pick_day_icon" src="/pages/share_page/images/edit.png" style="height: 30rpx; width: 30rpx;" bindtap="pop_pickday"></image>
+            <view class="available_time_detail">
+            {{share_data.start_time }}
+            <image src="/pages/share_page/images/edit.png" style="position: relative; height: 30rpx; width: 30rpx;top: 5rpx;" bindtap="pop_start_time"></image>
+            {{" ~ "}}
+            {{share_data.end_time }}
+            <image src="/pages/share_page/images/edit.png" style="position: relative; height: 30rpx; width: 30rpx;top: 5rpx;" bindtap="pop_end_time"></image>
+            </view>
+        </view>
+        <view class="view4">
+            <view class="detail">详细地址：</view>
+            <input class="detail_detail" value="{{share_data.detail}}" placeholder="请输入详细地址" style="width: 450rpx;"id="{{index}}" bindinput="input_detail"/>
+        </view>
+        <view class="view5">
+            <view class="phone">联系电话：</view>
+            <input class="phone_detail" value="{{share_data.phone}}" placeholder="请输入联系电话" style="width: 450rpx;"id="{{index}}" bindinput="input_phone" type="number"/>
+        </view>
+        <button class="btn_save" id="{{index}}" bindtap="save_current">保存</button>
+        <button class="btn_delete" id="{{index}}" bindtap="delete_current">删除</button>
+    </view>
+</view>
+<view class="add" bindtap="add_new">
+    <image class="add_icon" src="/pages/share_page/images/plus.png" style="width: 40rpx; height: 40rpx;"></image>
+    新增闲置车位
+</view>
+
+

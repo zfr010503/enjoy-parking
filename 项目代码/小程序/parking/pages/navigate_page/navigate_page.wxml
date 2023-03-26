@@ -1,0 +1,7 @@
+<!--pages/navigate_page/navigate_page.wxml-->
+<text>pages/navigate_page/navigate_page.wxml</text>
+<button bindtap="findBeacon">寻找beacon</button>
+<button bindtap="draw">画</button>
+<view>d1:{{D1}}  d2:{{D2}}  d3:{{D3}}</view>
+<view>x:{{my_x}}  y:{{my_y}}</view>
+<canvas type="2d" id="indoor_map" ></canvas>

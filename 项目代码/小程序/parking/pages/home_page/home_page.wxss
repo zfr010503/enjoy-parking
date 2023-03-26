@@ -1,0 +1,160 @@
+/* pages/home_page/home_page.wxss */
+page{
+    height: 100%;
+}
+.search_view{
+    position: fixed;
+    bottom: 0px;
+    /* left: 25rpx; */
+    width: 750rpx;
+    height: 250rpx;
+    background: rgb(255, 255, 255);
+    border-radius: 30rpx;
+}
+.search_icon{
+    position: absolute;
+    top: 65rpx;
+    left: 25rpx;
+    height: 30rpx;
+    width: 30rpx;
+}
+.cancle{
+    position: absolute;
+    top: 30rpx;
+    right: 15rpx;
+    height: 100rpx;
+    width: 150rpx;
+    border-radius: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 235, 235);
+}
+.input_search{
+    position: absolute;
+    top: 30rpx;
+    left: 15rpx;
+    right: 15rpx;
+    padding-left: 45rpx;
+    margin-right: 100rpx;
+    height: 100rpx;
+    border-radius: 30rpx;
+    background: rgb(235, 235, 235);
+}
+.input{
+    position: absolute;
+    top: 30rpx;
+    left: 15rpx;
+    right: 15rpx;
+    padding-left: 45rpx;
+    height: 100rpx;
+    border-radius: 30rpx;
+    background: rgb(235, 235, 235);
+}
+.map_page{
+    position: fixed;
+    bottom: 200rpx;
+    /* left: 25rpx; */
+    width: 750rpx;
+    height: 75%;
+    overflow: hidden;
+    border-radius: 50rpx;
+    
+}
+.my_map{
+    width: 750rpx;
+    height: 100%;
+}
+.findme {
+    position: fixed;
+    left: 50rpx;
+    bottom: 300rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+.zoom {
+    position: fixed;
+    right: 55rpx;
+    bottom: 280rpx;
+    width: 60rpx;
+    height: 130rpx;
+    background: white;
+    border-radius: 40rpx;
+    box-shadow: 1px -0.5px 1px 1px rgba(219, 219, 219, 0.603);
+}
+.zoomin {
+    position: absolute;
+    left: 0rpx;
+    top: 0px;
+    width: 60rpx;
+    height: 60rpx;
+}
+.zoomout {
+    position: absolute;
+    left: 0rpx;
+    bottom: 0px;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.suggestionview{
+    width: 100%;
+    margin-bottom: 100rpx;
+    position: absolute;
+}
+.suggest{
+    height: 100rpx;
+    width: 700rpx;
+}
+.btn1{
+    position: absolute;
+    right: 50rpx;
+    top: 150rpx;
+    background-color: #1E90FF;
+    border-color:  #1E90FF;
+    color: white;
+    font-size: 28rpx;
+    width: 200rpx;
+}
+.btn2{
+    position: absolute;
+    right: 50rpx;
+    top: 280rpx;
+    background-color: #1E90FF;
+    border-color:  #1E90FF;
+    color: white;
+    font-size: 28rpx;
+    width: 200rpx;
+}
+.pl_data_view{
+    position: absolute;
+    left: 50rpx;
+    top: 100rpx;
+    height: 300rpx;
+    width: 300rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25rpx;
+    box-shadow: 1px 1px 2px 2px rgba(182, 182, 182, 0.829);
+}
+.top_widget{
+    width: 200rpx;
+    height: 80rpx;
+}
+.city{
+    position: absolute;
+    left: 20rpx;
+    height: 25rpx;
+}
+.down{
+    position: absolute;
+    left: 90rpx;
+    top: 10rpx;
+    width: 25rpx;
+    height: 25rpx;
+}
+.city_view{
+    margin-top: 10px;
+}

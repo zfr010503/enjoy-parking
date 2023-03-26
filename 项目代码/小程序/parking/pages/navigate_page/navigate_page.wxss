@@ -1,0 +1,5 @@
+/* pages/navigate_page/navigate_page.wxss */
+canvas{
+    height: 400px;
+    width: 300px;
+}
