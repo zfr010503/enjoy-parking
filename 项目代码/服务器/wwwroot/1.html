@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPlayer</title>
+    <script src="./jquery.min.js"></script>
+    <script src="./EasyPlayer-element.min.js"></script>
+</head>
+<style>
+   #player .easy-player {
+        height: 400px;
+        position: relative;
+    }
+</style>
+<body>
+    <h4 style="width:600px;margin: auto;">EasyPlayer播放器</h4>
+    <br>
+    <div style="width:600px;  height: 400px;position: relative;">
+        <easy-player id="player" live="true" show-custom-button="true" decode-wasm="true" video-url="http://47.106.193.22:10086/flv/live/_wWZFweng.flv"></easy-player>
+        <iframe src="http://47.106.193.22:10086/share.html?id=_wWZFweng&type=live&autoplay=yes&livetype=hls&autoplay=yes" width="640" height="360" style="border:0" allow="autoplay" allowfullscreen></iframe>
+    </div>
+     <script>
+    //     var btn = document.getElementById('btn'); 
+    //     // 地址栏
+    //     var value = document.getElementById('value');
+    //     value.value="http://47.106.193.22:10086/flv/live/_wWZFweng.flv";
+    //     //播放事件 传入地址播放
+    //     btn.onclick = function(){
+    //         $('#player').attr('video-url',value.value)
+    //     }
+    
+    // </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+
+{"username":"abcd","lock_id":"123","plate":"bbcd"}
+{"username":"ajdhk","lock_id":"123","plate":"bbcd"}
+{"username":"||L K R||","lock_id":"SMART_LOCK","plate":"粤B12345"}
